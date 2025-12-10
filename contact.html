@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | M CORP Corporate Services</title>
+    <link rel="stylesheet" href="assets.css" />
+    <script>
+      // Apply saved theme when page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        const darkMode = localStorage.getItem("darkMode");
+        if (darkMode === "enabled") {
+          document.body.classList.add("dark-mode");
+        }
+      });
+    </script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        background: #f5f9ff;
+        color: #333;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      /* === RGB Border Lights (Top and Bottom) === */
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(
+          90deg,
+          red,
+          orange,
+          yellow,
+          lime,
+          cyan,
+          blue,
+          violet,
+          red
+        );
+        background-size: 400%;
+        z-index: 999;
+        animation: rgbLight 6s linear infinite;
+      }
+
+      body::before {
+        top: 0;
+      }
+
+      body::after {
+        bottom: 0;
+      }
+
+      @keyframes rgbLight {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      header {
+        text-align: center;
+        background: linear-gradient(135deg, #0056b3, #009dff);
+        color: white;
+        padding: 60px 20px;
+      }
+
+      header img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #fff;
+        margin-bottom: 10px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        letter-spacing: 1px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        background: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      nav a {
+        color: #004c99;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      nav a:hover,
+      nav a.active {
+        color: #009dff;
+        border-bottom: 2px solid #009dff;
+        padding-bottom: 3px;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        max-width: 1000px;
+        margin: 70px auto;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        padding: 50px;
+        text-align: center;
+      }
+
+      .contact-section h2 {
+        color: #004c99;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .contact-section p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 40px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      input,
+      textarea {
+        width: 80%;
+        max-width: 600px;
+        padding: 15px;
+        border: 2px solid #e3e9f2;
+        border-radius: 12px;
+        font-size: 1rem;
+        transition: 0.3s;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: #009dff;
+        outline: none;
+        box-shadow: 0 0 8px rgba(0, 157, 255, 0.2);
+      }
+
+      textarea {
+        height: 140px;
+        resize: none;
+      }
+
+      button {
+        background: linear-gradient(135deg, #0056b3, #009dff);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        padding: 14px 35px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background: linear-gradient(135deg, #004a9a, #00b7ff);
+        transform: scale(1.05);
+      }
+
+      /* Location Section */
+      #location {
+        background: #f5f9ff;
+        padding: 70px 20px;
+        text-align: center;
+      }
+
+      #location h2 {
+        color: #004c99;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
+
+      #location iframe {
+        border-radius: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      footer {
+        background: #0056b3;
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 0.95rem;
+        margin-top: 60px;
+        position: relative;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="images/McorpLogo.jpg" alt="M CORP Logo" />
+      <h1>Contact Us</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="car-rental.html">Car Rental</a>
+      <a href="panggung.html">Panggung Bangsawan</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <section class="contact-section">
+      <h2>Get In Touch</h2>
+      <p>
+        Have a question or need assistance? Our team is ready to help you with
+        car rental services, theatre bookings, and corporate collaborations.
+      </p>
+
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 30px;
+          margin-bottom: 40px;
+        "
+      >
+        <div
+          style="
+            background: #ffffff;
+            border: 2px solid #e3e9f2;
+            border-radius: 15px;
+            padding: 25px 35px;
+            min-width: 260px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+          "
+        >
+          <h3 style="color: #004aad; margin-bottom: 10px">📞 Phone</h3>
+          <p style="font-size: 1.05rem; color: #333">
+            <a
+              href="tel:062309699"
+              style="color: #004aad; text-decoration: none"
+              >062-309699</a
+            >
+          </p>
+        </div>
+
+        <div
+          style="
+            background: #f9fbff;
+            border: 2px solid #e3e9f2;
+            border-radius: 15px;
+            padding: 25px 35px;
+            min-width: 260px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+          "
+        >
+          <h3 style="color: #004aad; margin-bottom: 10px">✉️ Email</h3>
+          <p style="font-size: 1.05rem; color: #333">
+            <a
+              href="mailto:info@mcorpservices.my"
+              style="color: #004aad; text-decoration: none"
+              >info@mcorpservices.my</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Subject" />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <section id="location">
+      <h2>Our Location</h2>
+      <div
+        style="
+          max-width: 900px;
+          margin: 0 auto 30px;
+          background: #ffffff;
+          border-radius: 20px;
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+        "
+      >
+        <iframe
+          src="https://www.google.com/maps?q=Lot%20GF3%2C%20Aras%20Bawah%2C%20Menara%20MITC%2C%2075450%20Ayer%20Keroh%2C%20Melaka&output=embed"
+          width="100%"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <p style="font-size: 1.1rem; color: #333; line-height: 1.6">
+        📍 <strong>M CORP Corporate Services</strong><br />
+        Lot GF3, Aras Bawah, Menara MITC,<br />
+        75450 Ayer Keroh, Melaka
+      </p>
+    </section>
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+
+      <form
+        id="contactForm"
+        action="https://formspree.io/f/mvgeblkv"
+        method="POST"
+      >
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-send">Send Message</button>
+
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 M CORP Corporate Services. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
