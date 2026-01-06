@@ -2,15 +2,13 @@
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: url("images/mcorpbuilding-300x203\ \(1\).png") no-repeat center
-    center fixed;
-  background-size: cover;
-  color: #1a1a1a;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff; /* PURE WHITE */
+  color: #333;
 }
 
-h1,
-h2 {
+
+h1, h2 {
   font-weight: 700;
 }
 
@@ -49,7 +47,7 @@ h2 {
   align-items: center;
   background: linear-gradient(90deg, #004aad, #0078ff);
   padding: 12px 8%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -85,8 +83,7 @@ h2 {
   border-radius: 5px;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover, .nav-links a.active {
   background: #e31e25;
 }
 /* === NAVBAR BASE === */
@@ -123,8 +120,8 @@ h2 {
 }
 
 .logo-circle img {
-  width: 300%; /* zoom in slightly */
-  height: 300%; /* zoom in slightly */
+  width: 300%;      /* zoom in slightly */
+  height: 300%;     /* zoom in slightly */
   object-fit: cover;
   transform: scale(1.1);
   transition: transform 0.4s ease;
@@ -139,11 +136,13 @@ h2 {
   display: flex;
   gap: 20px;
 }
+ 
+
 
 /* === HERO === */
 .hero {
   position: relative;
-  background: url("../images/bg-blue.jpg") center/cover no-repeat;
+  background: url('../images/bg-blue.jpg') center/cover no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -154,8 +153,7 @@ h2 {
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 42, 105, 0.6);
@@ -163,11 +161,12 @@ h2 {
 .home-hero {
   position: relative;
   height: 80vh; /* adjust as needed */
-  background-image: url("images/McorpLogo.jpg"); /* your new image */
-  background-size: cover; /* make it cover the whole section */
+  background-image: url('images/McorpLogo.jpg'); /* your new image */
+  background-size: cover;      /* make it cover the whole section */
   background-position: center; /* center the image */
   background-repeat: no-repeat;
 }
+
 
 .hero-content {
   position: relative;
@@ -202,7 +201,7 @@ h2 {
 /* === ABOUT === */
 .about {
   padding: 80px 10%;
-  text-align: center;
+  text-align: center; 
   background: white;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
@@ -216,12 +215,103 @@ h2 {
   margin-bottom: 20px;
 }
 
-.about p {
-  max-width: 800px;
-  margin: auto;
-  color: #333;
+.about-text {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
   line-height: 1.8;
 }
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+}
+/* === VISION & MISSION === */
+.vision-mission {
+  background: #ffffff; /* PURE WHITE */
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.vision-mission h2 {
+  font-size: 2.4rem;
+  color: #004aad;
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-align: center; /* TITLE CENTER */
+}
+/* === VISION & MISSION === */
+.vision-mission {
+  background: #ffffff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.vision-mission h2 {
+  font-size: 2.2rem;
+  color: #004aad;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+/* Box layout */
+.vm-box {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 35px 40px;
+  background: #f7f9fc;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Section titles */
+.vm-box h3 {
+  color: #004aad;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+/* Text alignment */
+.vm-box p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: center; /* neat & formal */
+}
+
+/* Grid layout */
+.vm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Card design */
+.vm-card {
+  background: #f7f9fc;
+  border-radius: 15px;
+  padding: 35px 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.vm-card h3 {
+  color: #004aad;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.vm-card p {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
 
 /* === GALLERY === */
 .gallery {
@@ -244,7 +334,7 @@ h2 {
 .gallery-item {
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: transform 0.4s;
 }
 
@@ -311,6 +401,7 @@ h2 {
   -webkit-overflow-scrolling: touch;
 }
 
+
 /* === FOOTER === */
 footer {
   background: #002b6f;
@@ -321,7 +412,7 @@ footer {
 }
 /* === PANGGUNG HERO === */
 .panggung-hero {
-  background: url("../images/panggung-bg.jpg") center/cover no-repeat;
+  background: url('../images/panggung-bg.jpg') center/cover no-repeat;
 }
 
 /* === SCHEDULE SECTION === */
@@ -346,13 +437,13 @@ footer {
   background: #f7f9fc;
   border-radius: 15px;
   padding: 25px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .show-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .btn-schedule {
@@ -370,7 +461,7 @@ footer {
 }
 /* === CAR RENTAL HERO === */
 .rental-hero {
-  background: url("../images/car-bg.jpg") center/cover no-repeat;
+  background: url('../images/car-bg.jpg') center/cover no-repeat;
 }
 
 /* === CAR CATEGORIES === */
@@ -395,14 +486,14 @@ footer {
 .car-card {
   background: white;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .car-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .car-card img {
@@ -417,7 +508,7 @@ footer {
 }
 
 .car-card p {
-  color: #444;
+  color:#004aad;
   font-size: 0.95rem;
   padding: 0 15px;
   margin-bottom: 15px;
@@ -460,18 +551,17 @@ footer {
   border-radius: 15px;
   padding: 25px;
   width: 280px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .why-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 /* === HOME HERO === */
 .home-hero {
-  background: linear-gradient(rgba(0, 74, 173, 0.8), rgba(0, 74, 173, 0.8)),
-    url("../images/home-bg.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 74, 173, 0.8), rgba(0, 74, 173, 0.8)), url('../images/home-bg.jpg') center/cover no-repeat;
 }
 
 /* === ABOUT SECTION === */
@@ -513,14 +603,14 @@ footer {
 .service-card {
   background: #f7f9fc;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .service-card img {
@@ -547,70 +637,12 @@ footer {
   background: #004aad;
   color: white;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 25px; 
   transition: background 0.3s;
 }
 
 .btn-service:hover {
   background: #e31e25;
-}
-.contact-section {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 25px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.contact-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 28px;
-  color: #1a1a1a;
-}
-
-.form-group {
-  margin-bottom: 18px;
-}
-
-.form-group label {
-  font-weight: 600;
-  margin-bottom: 6px;
-  display: block;
-  color: #333;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
-}
-
-.btn-send {
-  width: 100%;
-  padding: 14px 0;
-  background: #0056d2;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 17px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-send:hover {
-  background: #003f9a;
-}
-
-.form-status {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 15px;
-  font-weight: 600;
 }
 
 /* === FOOTER === */
@@ -644,8 +676,7 @@ footer a {
 }
 /* === CONTACT HERO === */
 .contact-hero {
-  background: linear-gradient(rgba(0, 74, 173, 0.8), rgba(0, 74, 173, 0.8)),
-    url("../images/contact-bg.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 74, 173, 0.8), rgba(0, 74, 173, 0.8)), url('../images/contact-bg.jpg') center/cover no-repeat;
 }
 
 /* === CONTACT INFO === */
@@ -665,7 +696,7 @@ footer a {
 .info-card {
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   padding: 30px;
   width: 250px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -673,7 +704,7 @@ footer a {
 
 .info-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .info-card h3 {
@@ -739,6 +770,28 @@ footer a {
   display: block;
 }
 /* === PANGGUNG PAGE STYLES === */
+.mission-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mission-list li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  color: #333;
+  line-height: 1.7;
+}
+
+.mission-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00bfff;
+  font-weight: bold;
+}
+
 .about {
   padding: 60px 20px;
   background: #f7fbff;
@@ -868,21 +921,12 @@ footer {
 .footer-copy {
   text-align: center;
   margin-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255,255,255,0.2);
   padding-top: 15px;
   font-size: 14px;
   color: #ddd;
 }
 
-/* === PANGGUNG BACKGROUND === */
-.panggung-bg {
-  background-image: url("images/panggungBangsawan.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  color: white;
-}
 .panggung-bg::before {
   content: "";
   position: fixed;
@@ -893,3 +937,5 @@ footer {
   background: rgba(0, 0, 0, 0.4);
   z-index: -1;
 }
+
+
